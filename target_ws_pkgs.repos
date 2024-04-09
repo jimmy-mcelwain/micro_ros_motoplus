@@ -3,7 +3,8 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-# Revisions checked out mostly target ROS 2 Galactic (or the micro-ROS equivalents).
+# Revisions checked out mostly target ROS 2 Galactic (or the micro-ROS equivalents),
+# except for all the message / interface packages, which are taken from Foxy.
 #
 # NOTE: this list has not been pruned. It's possible some of these repositories
 # are not actually needed for the MotoPlus platform.
@@ -27,6 +28,11 @@ repositories:
     type: git
     url: https://github.com/ros2/libyaml_vendor.git
     version: 1.2.2
+  ros2/tinydir_vendor:
+    type: git
+    url: https://github.com/ros2/tinydir_vendor.git
+    # tip of 'master', few commits past 1.1.1
+    version: f1ee71b2fb02b24ee40123a905b16922938ca80a
 
   ros2/rcl:
     type: git
@@ -119,12 +125,11 @@ repositories:
   ros2/common_interfaces:
     type: git
     url: https://github.com/ros2/common_interfaces.git
-    version: 2.2.4
+    version: 2.0.5
   ros2/example_interfaces:
     type: git
     url: https://github.com/ros2/example_interfaces.git
-    # one commit ahead of 0.9.2
-    version: ae3df08ac12cea293f53520c7c7dc67cb0cf5355
+    version: 0.9.1
   uros/micro_ros_msgs:
     type: git
     url: https://github.com/micro-ROS/micro_ros_msgs.git
@@ -132,7 +137,8 @@ repositories:
   ros2/rcl_interfaces:
     type: git
     url: https://github.com/ros2/rcl_interfaces.git
-    version: 1.0.3
+    # basically 1.0.0, but with some documentation and QD updates
+    version: ee04e046132be9d9fdcdaeff8dd54a5d0d9aa022
   ros2/test_interface_files:
     type: git
     url: https://github.com/ros2/test_interface_files.git
@@ -140,7 +146,7 @@ repositories:
   ros2/unique_identifier_msgs:
     type: git
     url: https://github.com/ros2/unique_identifier_msgs.git
-    version: 2.2.1
+    version: 2.1.3
 
   # only used to determine the ROS 2 codename during packaging
   ros2/ros_environment:
@@ -157,16 +163,14 @@ repositories:
   extra/ros-controls/control_msgs:
     type: git
     url: https://github.com/ros-controls/control_msgs.git
-    # three commits past 3.0.0 (upstream 'galactic'): "removes controller
-    # states for multi dof joints"
-    # NOTE: this is likely an ABI breaking change between galactic and humble
-    version: 1416954c31432c192ff95a06559847e87386cf60
+    # two commits behind foxy-devel HEAD (which update GHA config)
+    version: 2.5.1
   extra/ros2/geometry2_tf2_msgs:
     type: git
     url: https://github.com/ros2/geometry2.git
-    # The commit specified here is 1 commit past '0.17.4' (the latest
-    # version released into ROS 2 Galactic).
-    version: 1186ee1e1be1dfe3691f31ba7f13662b1f1e1b91
+    # The commit specified here is 1 commit past '0.13.13' (the latest
+    # version released into ROS 2 Foxy).
+    version: 2d0ef227309d3024c0decb20d0457458ab7335ac
   extra/motoros2_interfaces:
     type: git
     url: https://github.com/yaskawa-global/motoros2_interfaces.git

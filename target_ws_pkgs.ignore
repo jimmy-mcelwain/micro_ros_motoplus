@@ -14,7 +14,6 @@ extra/ros2/geometry2_tf2_msgs/tf2_geometry_msgs
 extra/ros2/geometry2_tf2_msgs/tf2_kdl
 extra/ros2/geometry2_tf2_msgs/tf2_py
 extra/ros2/geometry2_tf2_msgs/tf2_ros
-extra/ros2/geometry2_tf2_msgs/tf2_ros_py
 extra/ros2/geometry2_tf2_msgs/tf2_sensor_msgs
 extra/ros2/geometry2_tf2_msgs/tf2_tools
 ros2/common_interfaces/common_interfaces
