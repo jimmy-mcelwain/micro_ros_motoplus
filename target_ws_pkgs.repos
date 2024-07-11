@@ -174,5 +174,4 @@ repositories:
   extra/motoros2_interfaces:
     type: git
     url: https://github.com/yaskawa-global/motoros2_interfaces.git
-    # branch: main
-    version: 134e2b4110f21f5e72aadf9f5af30644a46573b0
+    version: 0.1.2
