@@ -150,6 +150,4 @@ repositories:
   extra/motoros2_interfaces:
     type: git
     url: https://github.com/yaskawa-global/motoros2_interfaces.git
-    # This is one commit past 0.1.3 because otherwise MotoROS2 would 
-    # not build properly. 
-    version: c0d62db96b1f54b023fb1bd17796c6d40e1bcfd3
+    version: 0.1.4
