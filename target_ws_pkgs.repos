@@ -108,10 +108,15 @@ repositories:
     url: https://github.com/ros2/ros2_tracing.git
     version: 8d898b5ff0d79ef34eeae73a6ef3a20b30fe1ac8
     # NOTE: this is not the same as the jazzy release. 
-    # this includes a few commits past jazzy. This specific
-    # commit contains a necessary change (getting rid of the
-    # deprecation message macros). We could cherry pick this
-    # commit instead, but then we would need a new fork. 
+    # This is a commit on rolling which is a few commits
+    # past where jazzy and rolling diverged. 
+    # This commit contains a necessary change
+    # The __attribute__((deprecated(msg))) form is 
+    # only supported in GCC version 4.5+, which is newer than 
+    # what we are using. The MotoPlus compiler does not like this line:
+    # https://github.com/ros2/ros2_tracing/blob/42e26cca398246db56881e17394abf9f8d3b7755/tracetools/include/tracetools/tracetools.h#L130
+    # We could make a new fork and cherry pick this commit instead
+    # but decided against it to avoid having to maintain a fork. 
 
   # messages/services/actions
   ros2/common_interfaces:
